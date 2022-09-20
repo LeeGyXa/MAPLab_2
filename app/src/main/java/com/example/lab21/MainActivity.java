@@ -1,5 +1,6 @@
 package com.example.lab21;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
     }
 // button function
+    @SuppressLint("SetTextI18n")
     public void onBtnClick(View view) {
 
         String input = this.textInput.getText().toString();
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         if(input.matches("")){
 
             Toast.makeText(this, "You did not enter a text", Toast.LENGTH_SHORT).show();
+            this.textResults.setText("None!");
         }
 // characters selection
         else {
