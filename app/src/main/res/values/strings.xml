@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lab_2</string>
+    <string name="text">Input text</string>
+    <string name="count">Count</string>
+    <string name="spinner">spinner</string>
+    <string name="nothing">None!</string>
+    <string-array name="count_choice">
+        <item>Words</item>
+        <item>Characters</item>
+    </string-array>
+</resources>
