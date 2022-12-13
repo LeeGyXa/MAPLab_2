@@ -49,8 +49,13 @@ public class MainActivity extends AppCompatActivity {
         else {
             if (spinner.getSelectedItem().toString().equals("Characters")) {
             int charsCount = SymbolsCounter.getChars(input);
+            if (charsCount == -1){
+                Toast.makeText(this, "You did not enter any words. Try Characters option : )", Toast.LENGTH_SHORT).show();
+                this.textResults.setText("None!");
+            } else{
+
             String finalResults = String.valueOf(charsCount);
-            this.textResults.setText(finalResults);
+            this.textResults.setText(finalResults);}
             }
 // words selection
             else if (spinner.getSelectedItem().toString().equals("Words")) {
